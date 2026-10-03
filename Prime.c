@@ -2,23 +2,25 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,i;
     printf("Enter any number: ");
     scanf("%d",&n);
-    int c=0;
-    for(int i=1;i<=n;i++)
+    if(n<=1)
     {
-        if(n%i==0)
-        {
-            c+=1;
-        }
+        printf("\n%d is neither Prime nor Composite Number",n);
     }
-    if(c<2)
-        printf("\n%d is neither Prime nor Composite",n);
-    else if (c==2)
-        printf("\n%d is a Prime Number",n);
     else
-        printf("\n%d is a Composite Number",n);
-        
+    {
+        for(i=2;i<=n/2;i++)
+        {
+            if(n%i==0)
+                break;
+            
+        }
+        if(i>n/2)
+            printf("\n%d is a Prime Number",n);
+        else
+            printf("\n%d is a Composite Number",n);
+    }
     return 0;
 }

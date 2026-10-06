@@ -15,7 +15,7 @@ int main()
     d=(b*b) - (4*a*c);
     if(a==0)
     {
-        printf("\nInvalid Output");
+        printf("\nInvalid Input");
         return 0;
     }
     if(d<0.0)
